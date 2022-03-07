@@ -10,7 +10,7 @@ import { addToCart } from "../redux/actions/cartActions";
 
 export default function ProductDetails({ match, history }) {
   // console.log(props, "line 23 props product details");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { id } = useParams();

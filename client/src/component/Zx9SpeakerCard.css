@@ -14,7 +14,7 @@ img {
   align-items: center;
   background-color: #d87d4a;
   border-radius: 0.5em;
-  background-image: url("/public/pattern-circles.svg");
+  background-image: url("../assets/pattern-circles.svg");
   background-size: cover;
   background-position-x: center;
   background-position-y: -20.3em;

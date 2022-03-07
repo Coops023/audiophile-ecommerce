@@ -1,6 +1,5 @@
-import "./quote.css";
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
