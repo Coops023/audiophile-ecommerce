@@ -9,8 +9,11 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+const logger = require("morgan");
+
 //import your models
-require("./models/quote");
+
+require("./models/Product");
 
 mongoose
   .connect(MONGODB_CONNECTION_STRING, {
@@ -23,11 +26,18 @@ mongoose
   .catch((err) => console.log(err));
 
 //middleware
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// In development environment the app logs
+app.use(logger("dev"));
+
 //import routes
-require("./routes/quoteRoute.js")(app);
+require("./routes/productRoute.js")(app);
+
+// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
+require("./error-handling")(app);
 
 const PORT = process.env.PORT || 5000;
 
