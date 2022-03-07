@@ -3,9 +3,9 @@ const Product = mongoose.model("Product");
 const { Types } = require("mongoose");
 
 module.exports = (app) => {
-  app.get("/", (req, res, next) => {
-    res.json("All good in here");
-  });
+  // app.get("/", (req, res, next) => {
+  //   res.json("All good in here");
+  // });
 
   // get all products
   app.get("/all-products", async (req, res) => {
